@@ -1,11 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import OccupanciesContainer from './OccupanciesContainer';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.heading}>Live Gym Counts:</Text>
+      <OccupanciesContainer style={{top: 50}}></OccupanciesContainer>
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -13,8 +15,16 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#121212',
     alignItems: 'center',
-    justifyContent: 'center',
+    //justifyContent: 'center',
   },
+
+  heading: {
+    paddingTop: 50,
+    margin: 20,
+    color: 'white',
+    fontSize: 24,
+    fontWeight: 'bold',
+  }
 });
